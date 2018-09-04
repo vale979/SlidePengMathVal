@@ -1,0 +1,102 @@
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usetheme[compress]{Berlin}
+
+\begin{document}
+	\author{Valerian Mahdi Pratama (10117049)}
+	\title{Kalimat Terbuka, Apa Itu?}
+	\subtitle{MA2111 Pengantar Matematika}
+	\institute[Prodi Matematika FMIPA ITB]{Program Studi Matematika \\Fakultas Matematika dan Ilmu Pengetahuan Alam \\Institut Teknologi Bandung}
+	\date{}
+	%Mengatur opacity dari teks transparan yang muncul saat \pause
+	\setbeamercovered{transparent=10}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+\section{Pendahuluan}
+\begin{frame}{Sebelum kita mulai..}
+Mari kita ingat-ingat dulu, apa sih proposisi itu? Kalau variabel, itu apa?
+\begin{block}{Proposisi}
+	\pause
+	\textbf{Definisi.} Kalimat deklaratif yang dapat bernilai benar atau salah, tetapi tidak keduanya. Kebenaran atau kesalahan dari kalimat tersebut disebut sebagai nilai kebenaran (\textit{truth value}) \cite{RM14}.
+\end{block}
+\begin{block}{Variabel}
+	\pause
+	\textbf{Definisi.} Simbol yang merepresentasikan suatu objek yang tak ditentukan yang bisa dipilih dari suatu himpunan $U$. Himpunan $U$ adalah himpunan semesta untuk suatu variabel yang anggotanya boleh dipilih untuk menggantikan variabel \cite{TS18}.
+\end{block}
+\end{frame}
+\section{Kalimat Terbuka}
+\begin{frame}{Kalimat Terbuka}
+\pause
+\begin{block}{Kalimat Terbuka}
+	\textbf{Definisi.} Kalimat terbuka adalah suatu kalimat $P(x_1, x_2, ... , x_n)$ yang melibatkan variabel $x_1, x_2, ..., x_n$ yang kemudian mengakibatkan suatu kalimat tersebut dapat bernilai benar atau salah setelah variabel-variabel tersebut diberi nilai. Kalimat tersebut kemudian berubah menjadi pernyataan/proposisi. \cite{TS18}
+\end{block}
+\pause
+Kalimat terbuka disebut juga sebagai predikat atau fungsi proposisi.
+\end{frame}
+\begin{frame}{Contoh}
+Lihat beberapa kalimat terbuka berikut:\\
+$P(x) :=$ Valerian semester ini mengambil mata kuliah $x$\\
+\pause
+$Q(x) := x^2 = -1$\\
+\pause
+$R(x,y,z) := x^2 + y^2 + z^2 = 1$\\
+\pause
+$H(A) :=$ $x = A$ adalah solusi dari $x^2 - x - 2= 0$
+\pause\\
+
+Sekarang mari periksa nilai kebenaran dari:\\
+1. $P($"Pengantar Matematika"$)$\pause\\2. $Q(0)$\pause\\3. $H(2)$\pause\\4. $R(0,0,1)$\pause\\5. $R(1,1,-1)$
+\end{frame}
+\section{Himpunan Kebenaran}
+\begin{frame}{Himpunan Kebenaran}
+\begin{block}{\textit{Truth Set}}
+	\pause
+	\textbf{Definisi.} Himpunan kebenaran (\textit{truth set}) dari suatu kalimat terbuka adalah sekumpulan objek dalam himpunan universal yang dapat disubtitusikan ke variabel dalam kalimat terbuka dan menjadikan kalimat terbuka tersebut pernyataan bernilai benar. \cite{TS18}
+\end{block}
+\end{frame}
+\begin{frame}{Himpunan Kebenaran - Contoh (1)}
+Mari kita tinjau kembali contoh kalimat terbuka yang kita bahas sebelumnya.\\\pause
+$P(x) :=$ Valerian semester ini mengambil mata kuliah $x$
+\pause
+\\
+Untuk kalimat $P(x)$, himpunan universalnya adalah $M =$ \{Himpunan semua mata kuliah yang ada\} dan himpunan kebenarannya adalah $\{x \in M$ | $P(x)\}$, yaitu semua $x$ dalam M yang membuat $P(x)$ benar.
+\pause
+\\
+Sekarang untuk kalimat $Q(x)$ := $x^2 = -1$. Untuk himpunan universal $\mathbb{R}$ himpunan kebenarannya adalah $\emptyset$. Jika kita ganti himpunan universalnya menjadi $\mathbb{C}$ himpunan kebenarannya menjadi $\{-i,i\}$.
+\end{frame}
+\begin{frame}{Himpunan Kebenaran - Contoh (2)}
+Tinjau kalimat terbuka berikut
+$$P(x) := x^2 - x + 1\;habis\;dibagi\;2$$
+Untuk $x \in \mathbb{Z}^+$, apakah himpunan kebenarannya?
+\end{frame}
+\begin{frame}{Himpunan Kebenaran - Contoh (2, cont.)}
+Kalimat tersebut sama saja dengan mencari $x$ yang memenuhi $x^2 - x + 1 \equiv 0\;(mod\;2)$. Karena $x$ diharuskan bilangan bulat positif maka himpunan universal kita adalah $\mathbb{Z}^+$.\\\pause Dengan sifat modulo, kita tahu bahwa $$(x^2 - x + 1)\;mod\;2 = ((x\;mod\;2)^2-(x\;mod\;2) + 1)\;mod 2$$\pause Dengan kata lain, agar bernilai nol maka haruslah $(x\;mod\;2)^2-(x\;mod\;2) = -1$. Karena $-1 \equiv 1 (mod\;2)$, maka haruslah $(x\;mod\;2)^2-(x\;mod\;2) = 1$.\pause Untuk $x \in \mathbb{Z}^+$ tidak ada $x$ yang memenuhi sehingga \textit{truth set} dari kalimat tersebut adalah $\emptyset$.
+\end{frame}
+\begin{frame}{Himpunan Kebenaran - Contoh (2, cont.)}
+Bagaimana kalau kalimatnya diubah menjadi $P'(x) := x^2 - x + 1$ bernilai ganjil?
+\pause\\
+
+Sebelumnya kita telah tunjukkan bahwa tidak ada $x$ bulat positif yang menjadikan polinom tersebut genap. Oleh karena itu \textit{truth set} dari kalimat $P'(x)$ adalah $\mathbb{Z}^+ - \emptyset = \mathbb{Z}^+$.
+\pause\\
+
+Secara lebih umum, jika kita punya himpunan universal $H$ dari suatu kalimat terbuka dan himpunan kebenarannya T, jika kita ingin mencari kebalikannya (himpunan ketika nilainya menjadi salah), maka kita punya himpunan $
+H-T$.
+\end{frame}
+\begin{frame}{Himpunan Kebenaran}
+Beberapa metode untuk mencari himpunan kebenaran dari suatu kalimat terbuka:
+\begin{itemize}
+	\item Menyocokkan dengan himpunan universal
+	\item Melakukan operasi matematika untuk menyelesaikan persamaan
+	\item \textit{Prior math knowledge}
+\end{itemize}
+\end{frame}
+\section{Referensi}
+\begin{frame}{Referensi}
+%Style referensi dengan panduan gaya APA
+\bibliographystyle{apalike}
+%Refer ke file .bib (harus ada di direktori yang sama)
+\bibliography{openstate}
+\end{frame}
+\end{document}
